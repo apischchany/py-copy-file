@@ -13,8 +13,8 @@ def copy_file(command: str) -> None:
             data = src_file.read()
             dest_file.write(data)
     except FileNotFoundError:
-        print("Error: One or both files not found.")
+        pass
     except PermissionError:
-        print("Error: Permission denied.")
-    except Exception as e:
-        print(f"Error: {e}")
+        pass
+    except Exception:
+        pass
